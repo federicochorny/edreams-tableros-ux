@@ -1,4 +1,4 @@
-// Contenido de los tableros. Evidencia capturada en www.edreams.es (web, escritorio 1366 px y móvil 390 px) el 13/09/2026.
+// Contenido de los tableros. Evidencia capturada en www.edreams.es (web, escritorio 1366 px y móvil 390 px).
 // Búsqueda de referencia: Madrid → Roma, 16/10 al 23/10/2026, 1 adulto. No se realizó ningún pago.
 
 window.LEYES = [
