@@ -12,6 +12,5 @@ Sitio estático (HTML, CSS y JS, sin build). Para verlo en local, abrí `index.h
 |---|---|
 | `data.js` | Textos de las leyes y heurísticas |
 | `flujos.js` | Task flows y user flows (Mermaid) |
-| `evidencia/` | Capturas de www.edreams.es tomadas el 13/09/2026 |
 
 El registro de prompts está en el documento `prompts_leyes_heuristicas` del Drive del grupo.
