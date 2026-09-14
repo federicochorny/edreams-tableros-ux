@@ -7,7 +7,7 @@ window.FLUJOS = [
     titulo: 'Comprar un vuelo',
     prioridad: 1,
     porque: 'Es la tarea central del producto y la puerta de entrada al resto de los servicios, Prime incluido.',
-    fuente: 'Observado en edreams.es el 13/09/2026 (Madrid → Roma) hasta el formulario de datos. El pago y la confirmación no se ejecutaron.',
+    fuente: 'Observado en edreams.es (Madrid → Roma) hasta el formulario de datos. El pago y la confirmación no se ejecutaron.',
     task: [
       'Entrar a edreams.es', 'Cerrar el modal de inicio de sesión', 'Elegir «Ida y vuelta»', 'Escribir el origen',
       'Escribir el destino', 'Elegir las fechas de ida y vuelta', 'Indicar la cantidad de viajeros', 'Tocar «Buscar vuelos»',
