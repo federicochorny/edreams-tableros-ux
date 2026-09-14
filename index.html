@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eDreams bajo la lupa · Grupo 1</title>
+<meta name="description" content="Tableros de evaluación de eDreams: leyes UX, heurísticas de Nielsen y flujos de tareas. Diseño y experiencia de usuario, UdeSA 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#inicio"><span class="dot"></span>eDreams bajo la lupa</a>
+    <nav class="tabs" aria-label="Secciones">
+      <a href="#inicio" data-tab="inicio">Inicio</a>
+      <a href="#leyes" data-tab="leyes">Leyes UX</a>
+      <a href="#heuristicas" data-tab="heuristicas">Heurísticas</a>
+      <a href="#flujos" data-tab="flujos">Task &amp; user flows</a>
+      <a href="#metodo" data-tab="metodo">Método</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="inicio" class="panel">
+    <p class="kicker">Diseño y experiencia de usuario · UdeSA 2026 · Grupo 1</p>
+    <h1>Evaluamos cómo se usa eDreams hoy, con capturas del sitio real.</h1>
+    <p class="lead">Recorrimos las navegaciones principales de <strong>edreams.es</strong> con las 14 leyes de la ficha de la cátedra y las 10 heurísticas de Nielsen, y diagramamos cinco tareas tal como funcionan hoy, sin rediseñar nada.</p>
+    <div class="stats" id="stats"></div>
+    <div class="cards3">
+      <a class="navcard" href="#leyes"><span class="n">01</span><h3>Tablero de leyes UX</h3><p>Las 14 leyes de la ficha, con cumple o rompe, captura y respuesta a la pregunta guía.</p></a>
+      <a class="navcard" href="#heuristicas"><span class="n">02</span><h3>Tablero de heurísticas</h3><p>Las 10 heurísticas con severidad de 0 a 4, captura, explicación e impacto.</p></a>
+      <a class="navcard" href="#flujos"><span class="n">03</span><h3>Task flows y user flows</h3><p>Cinco tareas priorizadas: un task flow y un user flow por tarea, con los problemas detectados.</p></a>
+    </div>
+    <div class="callout">
+      <strong>Hallazgo que atraviesa los tres tableros.</strong> Entrar a Prime cuesta un clic (tocar el precio con descuento), pero salir exige llamar por teléfono en horario de España. La interfaz presenta la suscripción como un descuento y no muestra su costo junto al total. Esto coincide con los reclamos de consumidores que relevamos en el desk research.
+    </div>
+  </section>
+
+  <section id="leyes" class="panel" hidden>
+    <p class="kicker">Tablero 01</p>
+    <h2>Leyes UX</h2>
+    <p class="lead">Usamos como checklist la <em>Ficha de referencia rápida</em> de la cátedra (basada en lawsofux.com). Documentamos las 14 leyes: cada tarjeta indica si eDreams cumple o rompe la ley en ese punto, con una captura del lugar exacto y la respuesta a la pregunta guía.</p>
+    <div class="filters" role="group" aria-label="Filtrar leyes">
+      <button class="chip on" data-f="todas">Todas</button>
+      <button class="chip" data-f="cumple">Cumple</button>
+      <button class="chip" data-f="rompe">Rompe</button>
+    </div>
+    <div id="leyes-grid"></div>
+  </section>
+
+  <section id="heuristicas" class="panel" hidden>
+    <p class="kicker">Tablero 02</p>
+    <h2>Heurísticas de Nielsen</h2>
+    <p class="lead">Evaluación heurística completa de las 10 heurísticas, sin excepción. Severidad: <b>0</b> no es problema · <b>1</b> cosmético · <b>2</b> menor · <b>3</b> mayor · <b>4</b> catástrofe. Cuando la severidad es 0, la captura muestra dónde se cumple.</p>
+    <div class="sevchart" id="sevchart" aria-label="Severidad por heurística"></div>
+    <div id="heur-list"></div>
+  </section>
+
+  <section id="flujos" class="panel" hidden>
+    <p class="kicker">Tablero 03</p>
+    <h2>Task flows y user flows</h2>
+    <p class="lead">Diagramas de la situación actual de eDreams, no de lo que haríamos. El <b>task flow</b> es la secuencia lineal de acciones, sin decisiones. El <b>user flow</b> suma pantallas, entradas de datos y decisiones sí/no.</p>
+    <div class="legend">
+      <span><i class="lg start"></i>Inicio / fin</span>
+      <span><i class="lg screen"></i>Pantalla o acción</span>
+      <span><i class="lg input"></i>Input</span>
+      <span><i class="lg dec"></i>Decisión</span>
+      <span><i class="lg doc"></i>Documentado en la ayuda, no observado</span>
+    </div>
+    <details class="tasklist">
+      <summary>Listado de tareas y priorización</summary>
+      <div class="tablewrap"><table id="tareas"></table></div>
+    </details>
+    <div class="flowtabs" id="flowtabs" role="tablist"></div>
+    <div id="flow-view"></div>
+  </section>
+
+  <section id="metodo" class="panel" hidden>
+    <p class="kicker">Cómo lo hicimos</p>
+    <h2>Método y límites</h2>
+    <div class="prose">
+      <h3>Alcance</h3>
+      <ul>
+        <li>Producto: sitio web de eDreams (<code>www.edreams.es</code>), en escritorio (1366 px) y móvil (390 px). eDreams no tiene sitio para Argentina, así que usamos la versión en español de España.</li>
+        <li>Fecha del relevamiento: 13 de septiembre de 2026.</li>
+        <li>Recorrido de referencia: vuelo ida y vuelta Madrid → Roma, del 16 al 23 de octubre de 2026, 1 adulto.</li>
+        <li>No se pagó ninguna reserva ni se creó ninguna suscripción. Los formularios se probaron con datos ficticios, sin enviarlos.</li>
+      </ul>
+      <h3>Qué es observación y qué no</h3>
+      <ul>
+        <li>Todas las capturas de los tableros son del sitio real.</li>
+        <li>Los pasos posteriores al pago, la gestión de una reserva existente, el check-in y la baja de Prime se tomaron del centro de ayuda oficial (<code>help.edreams.es</code>). En los user flows aparecen con borde punteado.</li>
+        <li>Una evaluación heurística no reemplaza la investigación con usuarios: señala posibles puntos de dolor para contrastar en las entrevistas y la encuesta.</li>
+      </ul>
+      <h3>Severidad</h3>
+      <p>La severidad combina frecuencia, impacto y persistencia del problema. La calificación 4 de «Control y libertad» se apoya en que afecta dinero, se repite con cada renovación y no tiene salida online documentada.</p>
+      <h3>Uso de IA</h3>
+      <p>El código de esta miniweb y el primer borrador de los textos se hicieron con Claude Code. Cada prompt relevante, su resultado y los ajustes que hicimos quedan registrados en el documento <code>prompts_leyes_heuristicas</code> del Drive del grupo. El juicio de cumple/rompe y la severidad se revisaron contra las capturas.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot wrap">
+  <p>Trabajo académico · Diseño y experiencia de usuario · UdeSA 2026 · Grupo 1. No afiliado a eDreams. Capturas usadas con fines de análisis.</p>
+</footer>
+
+<dialog id="lightbox"><button class="close" aria-label="Cerrar">×</button><img alt=""><p class="cap"></p></dialog>
+
+<script src="data.js"></script>
+<script src="flujos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
